@@ -1,0 +1,116 @@
+/*-------- スマホ --------*/
+@media screen and (max-width: 480px) {
+  .top_inner {
+    height: 66vh;
+  }
+
+  br {
+    display: none;
+  }
+
+  h1 {
+    font-size: 3.2rem
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .top_inner {
+    height: 66vh;
+  }
+
+  .catch P {
+    font-size: 1.6rem
+  }
+
+  .lead_txt {
+    width: 100%;
+    text-align: center;
+  }
+
+  .lead_txt P {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  .feature_txt p,
+  .product_list li,
+  .copy {
+    font-size: 1.2rem;
+  }
+
+  .product_list ul {
+    display: inline-block;
+    margin: 10px 5px;
+  }
+
+  .product_btn a {
+    width: 80%;
+  }
+
+  .footer_logo a {
+    font-size: 3.2rem;
+  }
+
+}
+
+/*-------- タブレット --------*/
+@media screen and (max-width: 896px) {
+  .container {
+    width: 100%;
+  }
+
+  .fadeIn {
+    margin: 0;
+  }
+
+  .fadeIn_txt_wrapper {
+    position: static;
+    top: 0;
+    transform: translateY(0);
+    width: 100%
+  }
+
+  .fadeIn_img {
+    position: static;
+    width: 100%;
+    height: 235px;
+  }
+
+  .feature_left,
+  .feature_right {
+    width: 100%;
+  }
+
+  .relation_item {
+    width: 50%;
+  }
+
+  .relation3 .relation_overlay {
+    background-color: rgba(0, 54, 112, .7);
+  }
+
+  .relation3 .navy {
+    color: #ffffff;
+  }
+
+  .relation4 .relation_overlay {
+    background-color: rgba(225, 225, 225, .7);
+  }
+
+  .relation4 .white {
+    color: #003670;
+  }
+
+}
+
+
+/*-------- PC --------*/
+@media screen and (max-width: 1024px) {
+
+}

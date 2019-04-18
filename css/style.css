@@ -1,0 +1,417 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body, div, h1, h2, h3, p, a {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  list-style-position: inside;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+p {
+  line-height: 1.8;
+}
+
+h1{
+  font-size: 4.2rem;
+}
+
+h2 {
+  font-size: 5.6rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.navy {
+  color: #003670;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.bg_navy {
+  background-color: #003670;
+}
+
+.bg_gray {
+  background-color: #F2F4F5;
+}
+
+/*-------- Header --------*/
+.slick1 {
+  overflow: hidden;
+}
+
+.top_wrapper {
+  background-size: cover;
+  background-position: center;
+}
+
+.top_inner {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.catch {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+.catch p {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+/*-------- Header end --------*/
+
+/*-------- RevealEffect --------*/
+.revealEffect {
+  position: relative;
+   overflow: hidden;
+}
+
+.revealEffect_inner {
+   opacity: 0;
+}
+
+.revealEffect_wrapper.show .revealEffect_inner {
+   transition-delay: .5s;
+   opacity: 1;
+}
+
+.revealEffect_wrapper.show .revealEffect:after {
+   animation: hideFromLeft .5s forwards, showFromLeft .5s forwards .5s;
+   content:'';
+   position: absolute;
+   opacity: 1;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #003670;
+}
+
+/*after疑似要素を左から右にスライドイン*/
+@keyframes hideFromLeft {
+   0% {
+     transform: translateX(-100%);
+    }
+    100% {
+     transform: translateX(0%);
+   }
+}
+
+/*after疑似要素を左から右にスライドアウト*/
+@keyframes showFromLeft {
+   0% {
+     transform: translateX(0%);
+   }
+
+   100% {
+     transform: translateX(101%);
+   }
+}
+
+/*-------- RevealEffect end --------*/
+
+/*-------- FadeIn --------*/
+.fadeIn {
+  position: relative;
+  min-height: 450px;
+  margin: 150px 0;
+  /*スクロールでフェードインさせる*/
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: all 1s;
+}
+
+.fadeIn.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.fadeIn_img {
+  position: absolute;
+  width: 66%;
+  height: 450px;
+  background-size: cover;
+}
+
+.fadeIn_txt_wrapper {
+  position: absolute;
+  width: 50%;
+  padding: 60px 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+/*-------- FadeIn end--------*/
+
+/*-------- Lead --------*/
+ .lead .fadeIn_img {
+  background-image: url(../img/lead.jpg);
+  background-position: 50% 20%;
+}
+
+.lead .fadeIn_txt_wrapper {
+  right: 0;
+}
+
+.lead_txt {
+  text-align: center;
+}
+
+.lead_txt p {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-align: left;
+  padding: 0 30px;
+}
+
+/*-------- Lead end --------*/
+
+/*-------- Product --------*/
+.product .fadeIn_img {
+  background-image: url(../img/product.jpg);
+  background-position: 50% 60%;
+  right: 0;
+}
+
+.product_list {
+  display: flex;
+  justify-content: center;
+}
+
+.product_list ul {
+  display: inline-block;
+  margin: 10px 15px;
+}
+
+.product_list li {
+  font-size: 1.6rem;
+}
+
+.product_btn {
+  text-align: center;
+  transition: all .3s;
+}
+
+.product_btn:hover {
+  opacity: .8;
+}
+
+.product_btn a {
+  width: 40%;
+  font-size: 1.4rem;
+  background-color: #003670;
+  padding: 6px 0;
+}
+
+/*-------- Product end --------*/
+
+/*-------- Square --------*/
+.square {
+  position: relative;
+}
+
+/*要素の大きさを１：１の比率に固定する*/
+.square:before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.square_inner {
+  /*要素の大きさを１：１の比率に固定する*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/*-------- Square end--------*/
+
+/*-------- Feature --------*/
+.feature_inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature_left,
+.feature_right {
+  width: 50%;
+}
+
+.feature_item_wrapper {
+  display: flex;
+}
+
+.feature_item {
+  width: 50%;
+}
+
+.feature_item_inner {
+  /*Featureの文字を中央に配置する*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature_img {
+  background-size: cover;
+  background-position: center;
+}
+
+.feature1 .feature_img {
+  background-image: url('../img/feature1.jpg');
+}
+
+.feature2 .feature_img {
+  background-image: url('../img/feature2.jpg');
+}
+
+.feature3 .feature_img {
+  background-image: url('../img/feature3.jpg');
+}
+
+.feature4 .feature_img {
+  background-image: url('../img/feature4.jpg');
+}
+
+.feature_txt {
+  display: inline-block;
+}
+
+.txt_inner {
+  display: block;
+  text-align: center;
+}
+
+.feature_txt p {
+  font-size: 1.6rem;
+  display: inline-block;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/*-------- Feature end --------*/
+
+/*-------- Relation --------*/
+.relation_inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.relation_item {
+  width: 25%;
+}
+
+.relation_item_inner,
+.relation_overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.relation_img {
+  background-size: cover;
+  background-position: center;
+}
+
+.relation1 .relation_img {
+  background-color: #F2F4F5;
+}
+
+.relation2 .relation_img {
+  background-image: url(../img/relation1.jpg);
+}
+
+.relation3 .relation_img {
+  background-image: url(../img/relation2.jpg);
+}
+.relation4 .relation_img {
+  background-image: url(../img/relation3.jpg);
+}
+
+.relation_overlay {
+  width: 80%;
+  height: 80%;
+  transition: all .3s;
+}
+
+.relation_overlay:hover {
+  width: 100%;
+  height: 100%;
+}
+
+.relation2 .relation_overlay,
+.relation4 .relation_overlay {
+  background-color: rgba(0, 54, 112, .7);
+}
+
+.relation3 .relation_overlay {
+  background-color: rgba(225, 225, 225, .7);
+}
+
+/*-------- Relation end --------*/
+
+/*-------- Footer --------*/
+footer {
+  padding-top: 70px;
+  background-color: #003670;
+}
+
+.footer_inner {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.footer_logo a {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+
+.copy {
+  font-size: 1.6rem;
+  text-align: center;
+  padding-bottom: 30px;
+}
+/*-------- Footer end --------/
